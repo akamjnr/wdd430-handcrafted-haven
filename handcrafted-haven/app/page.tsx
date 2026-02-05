@@ -1,20 +1,11 @@
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F8FAFC] text-slate-900">
       {/* Navbar */}
-      <header className="border-b bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <h1 className="text-xl font-bold tracking-tight">
-            Handcrafted Haven
-          </h1>
-
-          <nav className="flex gap-6 text-sm font-medium text-slate-700">
-            <a href="#" className="hover:text-slate-900">Marketplace</a>
-            <a href="#" className="hover:text-slate-900">Sellers</a>
-            <a href="#" className="hover:text-slate-900">About</a>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-6 py-16">
@@ -24,7 +15,7 @@ export default function Home() {
           </p>
 
           <h2 className="mt-3 text-4xl font-bold leading-tight">
-            Discover unique handcrafted treasures, made with love.
+            Unique Handcrafted Treasures, Made with Love.
           </h2>
 
           <p className="mt-4 max-w-2xl text-lg text-slate-600">
@@ -68,12 +59,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Handcrafted Haven</p>
-          <p>Built with Next.js • Deployed on Vercel</p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
