@@ -4,7 +4,6 @@ import Footer from "../components/footer";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#F8FAFC] text-slate-900">
-      {/* Navbar */}
       <Navbar />
 
       {/* Hero */}
@@ -25,13 +24,19 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700">
+            <a
+              href="/marketplace"
+              className="rounded-xl bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-700"
+            >
               Browse Products
-            </button>
+            </a>
 
-            <button className="rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50">
+            <a
+              href="/sellers"
+              className="rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50"
+            >
               Become a Seller
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -44,21 +49,22 @@ export default function Home() {
         </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {["Jewelry", "Home Decor", "Art Prints", "Skincare Products"].map((item) => (
-            <div
-              key={item}
-              className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md"
-            >
-              <h4 className="text-lg font-semibold">{item}</h4>
-              <p className="mt-2 text-sm text-slate-600">
-                Browse handcrafted {item.toLowerCase()} made by local creators.
-              </p>
-            </div>
-          ))}
+          {["Jewelry", "Home Decor", "Art Prints", "Skincare Products"].map(
+            (item) => (
+              <div
+                key={item}
+                className="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md"
+              >
+                <h4 className="text-lg font-semibold">{item}</h4>
+                <p className="mt-2 text-sm text-slate-600">
+                  Browse handcrafted {item.toLowerCase()} made by local creators.
+                </p>
+              </div>
+            )
+          )}
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </main>
   );
